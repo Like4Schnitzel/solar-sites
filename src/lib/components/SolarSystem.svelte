@@ -1,9 +1,11 @@
 <script lang="ts">
     import TwinklingStars from "./TwinklingStars.svelte";
+
+    export let twinkleSpeed = 1;
 </script>
 
 <body class="main">
-    <TwinklingStars />
+    <TwinklingStars twinkleSpeed={twinkleSpeed} />
 </body>
 
 <style>

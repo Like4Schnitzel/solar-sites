@@ -1,4 +1,8 @@
-<div class="background-container">
+<script lang="ts">
+    export let twinkleSpeed = 1;
+</script>
+
+<div class="background-container" style="--twinkle-speed: {70/twinkleSpeed}s">
     <div class="stars"></div>
     <div class="twinkling"></div>
 </div>
@@ -20,8 +24,7 @@
             -webkit-transform: translate3d(1000px, 0px, 0px);
         }
     }
-
-    @-moz-keyframes move-background {    
+    @-moz-keyframes move-background {
         from {
             -webkit-transform: translate3d(0px, 0px, 0px);
         }
@@ -29,7 +32,6 @@
             -webkit-transform: translate3d(1000px, 0px, 0px);
         }
     }
-
     @-webkit-keyframes move-background {
         from {
             -webkit-transform: translate3d(0px, 0px, 0px);
@@ -69,11 +71,10 @@
         bottom: 0;
         z-index: 2;
         
-        -moz-animation:move-background 70s linear infinite;
-        -ms-animation:move-background 70s linear infinite;
-        -o-animation:move-background 70s linear infinite;
-        -webkit-animation:move-background 70s linear infinite;
-        animation:move-background 70s linear infinite;
-        
+        -moz-animation:move-background var(--twinkle-speed) linear infinite;
+        -ms-animation:move-background var(--twinkle-speed) linear infinite;
+        -o-animation:move-background var(--twinkle-speed) linear infinite;
+        -webkit-animation:move-background var(--twinkle-speed) linear infinite;
+        animation:move-background var(--twinkle-speed) linear infinite;
     }
 </style>
