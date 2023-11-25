@@ -1,10 +1,8 @@
 <script lang="ts">
     import SolarSystem from "$lib/components/SolarSystem.svelte";
+    import Planet from "$lib/components/Planet.svelte";
 </script>
 
-<SolarSystem>
-
+<SolarSystem twinkleSpeed={1}>
+    <Planet fallbackImage="fallback.png" fbImgAlt="The original trollface image" url="/example" size=20% />
 </SolarSystem>
-
-<style>
-</style>
