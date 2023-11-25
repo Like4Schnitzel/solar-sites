@@ -18,8 +18,4 @@
         height: 100%;
         background-color: black;
     }
-
-    .twinkling-stars {
-        display: none;
-    }
 </style>

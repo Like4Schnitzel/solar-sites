@@ -24,6 +24,7 @@
         width: var(--size);
         margin: 0;
         border-radius: 50%;
+        z-index: 1;
     }
 
     .container embed {
