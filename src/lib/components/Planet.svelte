@@ -4,11 +4,12 @@
     export let fbImgAlt: string;
     export let size: string;
     export let displayEmbed = true;
+    export let rotationSpeed: number = 1;
     let turnValue = 0.75;
-    let gradient = `linear-gradient(${turnValue}turn, rgba(255, 255, 255, 1), 30%, rgba(0, 0, 0, 0))`
+    let gradient = `linear-gradient(${turnValue}turn, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.75))`
 </script>
 
-<div class="container" style="--size: {size}; --gradient: {gradient};">
+<div class="container" style="--size: {size}; --gradient: {gradient}; --rotation-speed: {20/rotationSpeed}s;">
     <a href={url}>
         <img src={fallbackImage} alt={fbImgAlt}/>
         {#if displayEmbed}
@@ -19,13 +20,23 @@
 </div>
 
 <style>
+    @keyframes move-element {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        100% {
+            transform: translate(100%, 0px);
+        }
+    }
+
     .container {
         display: block;
         position: relative;
         aspect-ratio: 1 / 1;
         width: var(--size);
         margin: 0;
-        border-radius: 50%;
+        clip-path: circle();
+        z-index: 2;
     }
 
     .container embed {
@@ -41,8 +52,8 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
         z-index: 1;
+        animation: move-element var(--rotation-speed) linear infinite;
     }
 
     .container .gradient {
@@ -50,7 +61,6 @@
         background-size: cover;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
         background-image: var(--gradient);
         z-index: 2;
     }
