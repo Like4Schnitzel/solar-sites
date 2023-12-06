@@ -12,8 +12,10 @@
 <div class="container" style="--size: {size}; --gradient: {gradient}; --rotation-speed: {20/rotationSpeed}s;">
     <a href={url}>
         <img src={fallbackImage} alt={fbImgAlt}/>
+        <img src={fallbackImage} alt={fbImgAlt} class="overflow"/>
         {#if displayEmbed}
             <embed src={url} />
+            <embed src={url} class="overflow"/>
         {/if}
         <div class="gradient"></div>
     </a>
@@ -50,10 +52,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        width: 100%;
+        width: 200%;
         height: 100%;
         z-index: 1;
         animation: move-element var(--rotation-speed) linear infinite;
+    }
+
+    .container .overflow {
+        left: -200%;
     }
 
     .container .gradient {
