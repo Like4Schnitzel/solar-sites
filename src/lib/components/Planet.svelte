@@ -60,6 +60,7 @@
 
     .container .overflow {
         left: -200%;
+        margin-left: 1px;
     }
 
     .container .gradient {

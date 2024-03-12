@@ -4,5 +4,5 @@
 </script>
 
 <SolarSystem twinkleSpeed={1}>
-    <Planet fallbackImage="fallback.png" fbImgAlt="The original trollface image" url="/example" size=20% />
+    <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" url="/example" size=20% />
 </SolarSystem>
