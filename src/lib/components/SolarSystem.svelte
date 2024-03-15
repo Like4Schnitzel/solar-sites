@@ -14,12 +14,12 @@
             background-position: 0 0, 0 0;
         }
         100% {
-            background-position: 0 0, 1000px 0;
+            background-position: 1000px 0, 0 0;
         }
     }
     
     .solar-system {
-        background: url("stars.png") 0, url("twinkling.png") 0;
+        background: url("twinkling.png") 0, url("stars.png") 0;
         width: 100%;
         height: 100%;
         animation: background-scroll var(--twinkle-speed) infinite linear;
