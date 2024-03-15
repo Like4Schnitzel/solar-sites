@@ -3,6 +3,24 @@
     import Planet from "$lib/components/Planet.svelte";
 </script>
 
-<SolarSystem twinkleSpeed={1}>
-    <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" url="/example" size=20% />
-</SolarSystem>
+<body class="main">
+    <div>
+        <SolarSystem twinkleSpeed={1}>
+            <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=20% />
+            <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={2} />
+            <!--Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={0.5} /-->
+        </SolarSystem>
+    </div>
+</body>
+
+<style>
+    div {
+        height: 50%;
+        width: 50%;
+    }
+
+    .main {
+        height: 100%;
+        background-color: aliceblue;
+    }
+</style>
