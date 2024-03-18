@@ -38,7 +38,6 @@
         width: var(--size);
         margin: 0;
         clip-path: circle();
-        z-index: 2;
     }
 
     .container embed {
@@ -54,7 +53,6 @@
         bottom: 0;
         width: 200%;
         height: 100%;
-        z-index: 1;
         animation: move-element var(--rotation-speed) linear infinite;
     }
 
@@ -69,6 +67,5 @@
         width: 100%;
         height: 100%;
         background-image: var(--gradient);
-        z-index: 2;
     }
 </style>

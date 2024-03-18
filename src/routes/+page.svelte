@@ -15,6 +15,9 @@
 
 <style>
     div {
+        border-radius: 5%;
+        border: solid lightskyblue 5px;
+        margin: auto;
         height: 50%;
         width: 50%;
     }
