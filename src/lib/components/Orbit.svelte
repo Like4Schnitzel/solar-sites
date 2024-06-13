@@ -17,10 +17,13 @@
 
 <style>
     .viewport {
-        position: relative;
+        position: absolute;
         width: var(--width);
         height: var(--height);
-        margin: auto;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .horizontal-line {
@@ -50,9 +53,9 @@
     }
 
     @keyframes mX {
-        0% { transform: translateX(0px);   }
-        50% { transform: translateX(279px); }
-        100% { transform: translateX(0px);   }
+        0% { transform: translateX(0);   }
+        50% { transform: translateX(var(--width)); }
+        100% { transform: translateX(0);   }
     }
 
     @keyframes mO {
