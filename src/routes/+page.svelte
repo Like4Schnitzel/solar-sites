@@ -1,15 +1,22 @@
 <script lang="ts">
     import SolarSystem from "$lib/components/SolarSystem.svelte";
     import Planet from "$lib/components/Planet.svelte";
+    import Orbit from "$lib/components/Orbit.svelte";
 </script>
 
 <div class="main">
     <h1>It's like a window or something idk</h1>
     <div class="system-container">
         <SolarSystem twinkleSpeed={1}>
-            <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=20% />
-            <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={2} />
-            <!--Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={0.5} /-->
+            <Orbit width="60%" height="60%" objectSize="30%">
+                <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=100% />
+            </Orbit>
+            <!--
+            <Orbit width="45%" height="40%" objectSize="100%" rotationTime="4s">
+                <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={2} />
+            </Orbit>
+            <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={0.5} />
+            -->
         </SolarSystem>
     </div>
 </div>

@@ -23,6 +23,8 @@
         width: 100%;
         height: 100%;
         animation: background-scroll var(--twinkle-speed) infinite linear;
+        display: flex;
+        align-items: center;
     }
 
     .the-void {
