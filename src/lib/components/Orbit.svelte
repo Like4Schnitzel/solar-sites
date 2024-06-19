@@ -26,6 +26,7 @@
         margin-left: auto;
         margin-right: auto;
         display: flex;
+        pointer-events: none;
     }
 
     .the-pusher {

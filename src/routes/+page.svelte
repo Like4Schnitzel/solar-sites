@@ -8,15 +8,12 @@
     <h1>It's like a window or something idk</h1>
     <div class="system-container">
         <SolarSystem twinkleSpeed={1}>
-            <Orbit width="60%" height="60%" objectSize="40%">
-                <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=100% />
+            <Orbit width=60% height=60% objectSize=30% rotationTime=20s>
+                <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=100% gradientTurnTime=20s />
             </Orbit>
-            <Orbit width="45%" height="40%" objectSize="40%" rotationTime="4s">
-                <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=100% url="" rotationSpeed={2} />
+            <Orbit width=20% height=30% objectSize=40% rotationTime=4s>
+                <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=100% url="" rotationSpeed={2} gradientTurnTime=4s />
             </Orbit>
-            <!--
-            <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=20% url="" rotationSpeed={0.5} />
-            -->
         </SolarSystem>
     </div>
 </div>
@@ -33,8 +30,8 @@
         border: solid lightskyblue 5px;
         overflow: hidden;
         margin: auto;
-        height: 75%;
-        width: 75%;
+        height: 90%;
+        width: 95%;
     }
 
     .main {
@@ -43,6 +40,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: aliceblue;
+        background-color: darkgray;
+        overflow: hidden;
     }
 </style>
