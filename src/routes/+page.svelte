@@ -1,17 +1,19 @@
 <script lang="ts">
     import SolarSystem from "$lib/components/SolarSystem.svelte";
-    import Planet from "$lib/components/Planet.svelte";
     import Orbit from "$lib/components/Orbit.svelte";
+    import Planet from "$lib/components/Planet.svelte";
+    import Sun from "$lib/components/Sun.svelte";
 </script>
 
 <div class="main">
     <h1>It's like a window or something idk</h1>
     <div class="system-container">
         <SolarSystem twinkleSpeed={1}>
-            <Orbit width=60% height=60% objectSize=30% rotationTime=20s>
+            <Sun size=10% />
+            <Orbit width=60% height=70% objectSize=30% rotationTime=20s>
                 <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=100% gradientTurnTime=20s />
             </Orbit>
-            <Orbit width=20% height=30% objectSize=40% rotationTime=4s>
+            <Orbit width=20% height=30% objectSize=20% rotationTime=4s>
                 <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=100% url="" rotationSpeed={2} gradientTurnTime=4s />
             </Orbit>
         </SolarSystem>
