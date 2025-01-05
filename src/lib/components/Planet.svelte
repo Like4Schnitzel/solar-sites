@@ -72,7 +72,7 @@
         width: 100%;
         height: 100%;
         background-image: var(--gradient);
-        animation: mO var(--gradient-turn-time) linear 0s infinite
+        animation: mO var(--gradient-turn-time) linear 0s infinite;
     }
 
     @keyframes mO {
