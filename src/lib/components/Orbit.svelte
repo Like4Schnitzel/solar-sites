@@ -10,7 +10,7 @@
     <div class="horizontal-line">
         <div class="the-spinner">
             <div class="the-object">
-                <slot />
+                <slot gradientTurnTime={rotationTime} />
             </div>
         </div>
     </div>

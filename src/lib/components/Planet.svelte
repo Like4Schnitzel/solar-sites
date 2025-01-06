@@ -5,9 +5,9 @@
     export let size: string;
     export let displayEmbed = true;
     export let rotationSpeed: number = 1;
-    export let gradientTurnTime: string = "0s";
+    export let gradientTurnTime: string;
     let turnValue = -0.15;
-    let gradient = `linear-gradient(${turnValue}turn, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.75))`
+    let gradient = `linear-gradient(${turnValue}turn, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.75))`;
 </script>
 
 <div class="container" style="--size: {size}; --gradient: {gradient}; --rotation-speed: {20/rotationSpeed}s; --gradient-turn-time: {gradientTurnTime};">
@@ -72,11 +72,12 @@
         width: 100%;
         height: 100%;
         background-image: var(--gradient);
-        animation: mO var(--gradient-turn-time) linear 0s infinite;
+        animation: mO var(--gradient-turn-time) cubic-bezier(0.363380227632, 0, 0.636619772368, 1) 0s infinite;
     }
 
     @keyframes mO {
-        0% { transform: rotate(-45deg);   }
+        0%   { transform: rotate(-45deg); }
+        50%  { transform: rotate(135deg); }
         100% { transform: rotate(315deg); }
     }
 </style>

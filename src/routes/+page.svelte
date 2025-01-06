@@ -10,11 +10,11 @@
     <div class="system-container">
         <SolarSystem twinkleSpeed={1}>
             <Sun size=10% />
-            <Orbit width=60% height=70% objectSize=30% rotationTime=20s>
-                <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=100% gradientTurnTime=20s />
+            <Orbit width=60% height=70% objectSize=30% rotationTime=20s let:gradientTurnTime>
+                <Planet fallbackImage="fallback_rainbow.png" fbImgAlt="A rainbow gradient from left to right" url="/example" size=100% {gradientTurnTime} />
             </Orbit>
-            <Orbit width=20% height=30% objectSize=20% rotationTime=4s>
-                <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=100% url="" rotationSpeed={2} gradientTurnTime=4s />
+            <Orbit width=20% height=30% objectSize=20% rotationTime=4s let:gradientTurnTime>
+                <Planet fallbackImage="fallback_tf.png" fbImgAlt="The original trollface image" size=100% url="" rotationSpeed={2} {gradientTurnTime} />
             </Orbit>
         </SolarSystem>
     </div>
