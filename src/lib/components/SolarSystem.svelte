@@ -1,9 +1,11 @@
 <script lang="ts">
+    import twinkling from "./twinkling.png";
+    import stars from "./stars.png";
     export let twinkleSpeed = 1;
 </script>
 
 <div class="the-void">
-    <div class="solar-system" style="--twinkle-speed: {70/twinkleSpeed}s">
+    <div class="solar-system" style="--twinkle-speed: {70/twinkleSpeed}s; --background: url({twinkling}) 0, url({stars}) 0;">
         <slot />
     </div>
 </div>
@@ -19,7 +21,7 @@
     }
     
     .solar-system {
-        background: url("twinkling.png") 0, url("stars.png") 0;
+        background: var(--background);
         width: 100%;
         height: 100%;
         animation: background-scroll var(--twinkle-speed) infinite linear;
