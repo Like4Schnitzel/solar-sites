@@ -2,7 +2,6 @@
     export let url: string;
     export let fallbackImage: string;
     export let fbImgAlt: string;
-    export let size: string;
     export let displayEmbed = true;
     export let rotationSpeed: number = 1;
     export let gradientTurnTime: string;
@@ -10,7 +9,7 @@
     let gradient = `linear-gradient(${turnValue}turn, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.75))`;
 </script>
 
-<div class="container" style="--size: {size}; --gradient: {gradient}; --rotation-speed: {20/rotationSpeed}s; --gradient-turn-time: {gradientTurnTime};">
+<div class="container" style="--gradient: {gradient}; --rotation-speed: {20/rotationSpeed}s; --gradient-turn-time: {gradientTurnTime};">
     <a href={url}>
         <img src={fallbackImage} alt={fbImgAlt}/>
         <img src={fallbackImage} alt={fbImgAlt} class="overflow"/>
@@ -36,7 +35,7 @@
         display: block;
         position: relative;
         aspect-ratio: 1 / 1;
-        width: var(--size);
+        width: 100%;
         margin: 0;
         clip-path: circle();
     }
